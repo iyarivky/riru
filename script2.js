@@ -9,9 +9,12 @@ fs.readFile('contoh.json', 'utf8' , (err, data) => {
   }
 
   let input = Buffer.from(data,"utf-8")
+  let originalSize = input.length;
 
   compress(input).then(compressed => {
-      console.log(compressed)
+      let compressedSize = compressed.length;
+      let compressionRatio = ((originalSize - compressedSize) / originalSize) * 100;
+      console.log(`Compression ratio: ${compressionRatio.toFixed(2)}%`);
 
       decompress(compressed).then(decompressed => {
           let output = new TextDecoder("utf-8").decode(decompressed)
