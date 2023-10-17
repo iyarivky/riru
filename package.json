@@ -1,0 +1,17 @@
+{
+  "name": "riru",
+  "version": "1.0.0",
+  "description": "test",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "brotli-unicode": "^1.0.2",
+    "zlib": "^1.0.5"
+  }
+}
